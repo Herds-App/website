@@ -46,7 +46,7 @@
 				.navbar-nav {
 					background-color: #222;
 					border-radius: 30px;
-					border: 1px solid #333;
+					border: 1px solid white;
 					padding: 3px;
 				}
 				.stores {
@@ -79,6 +79,28 @@
 				font-weight: 600;
 				letter-spacing: -7px;
 			}
+
+			@keyframes Logo-Animation
+			{
+				0% {
+					transform: translateX(100%);
+					opacity: 0;
+				}
+				100% { 
+					transform: translateX(0%);
+					opacity: 1;
+				}
+			}
+
+			.animated-logo {
+				animation: Logo-Animation 1.2s ease-out;
+			}
+
+			.appstore {
+				width: 140px;
+				height: auto;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -95,21 +117,21 @@
 				<div class="navbar-collapse collapse justify-content-end" id="navbarsExample04">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link disabled">About</a>
+							<a class="nav-link disabled" href="about" style="color: white;">About</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="support">Support</a>
+							<a class="nav-link" href="support" style="color: white;">Support</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact">Contact</a>
+							<a class="nav-link" href="contact" style="color: white;">Contact</a>
 						</li>
 					</ul>
 					<div class="stores">
 						<a style="margin-right:5px;" href="https://apps.apple.com/us/app/herds-collegiate-app/id6459798725" target="_blank">
-							<img src="assets/img/appstore.svg" alt="Appstore link" draggable="false">
+							<img src="assets/img/appstore.svg" class = "appstore" alt="Appstore link" draggable="false">
 						</a>
 						<a href="#" target="_blank">
-							<img src="assets/img/playstore.svg" alt="Playstore link" draggable="false" width="169px">
+							<img src="assets/img/playstore.svg" class = "appstore" alt="Playstore link" draggable="false" width="169px">
 						</a>
 					</div>
 				</div>
@@ -118,7 +140,7 @@
 		
 		<div class="container">
 			<div class="hero text-center">
-				<label class="herotext">Connecting Ca<img loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="assets/img/icon.webp" draggable="false">pus Orgs.</label>
+				<label class="herotext">Connecting Ca<img alt ="Animated Logo" class="animated-logo" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="assets/img/icon.webp" draggable="false">pus Orgs.</label>
 				<span style="font-size:20px" class="tagline">Explore. Connect. Unite.</span>
 			</div>
 		</div>
